@@ -78,8 +78,8 @@ export async function createInvoice(prevState: State, formData: FormData) {
     };
   }
 
-  revalidatePath('/admin/dashboard/invoices');
-  redirect('/admin/dashboard/invoices');
+  revalidatePath('/dashboard/invoices');
+  redirect('/dashboard/invoices');
 }
 
 export async function updateInvoice(id: string, prevState: State, formData: FormData) {
@@ -111,8 +111,8 @@ export async function updateInvoice(id: string, prevState: State, formData: Form
     };
   }
 
-  revalidatePath('/admin/dashboard/invoices');
-  redirect('/admin/dashboard/invoices');
+  revalidatePath('/dashboard/invoices');
+  redirect('/dashboard/invoices');
 }
 
 export async function deleteInvoice(id: string) {
@@ -122,7 +122,7 @@ export async function deleteInvoice(id: string) {
     WHERE id = ${id}
   `;
 
-    revalidatePath('/admin/dashboard/invoices');
+    revalidatePath('/dashboard/invoices');
     return { message: 'Deleted Invoice.' };
   } catch (error) {
     console.log(error);
